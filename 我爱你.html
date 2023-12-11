@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我爱冀圣</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        #heart {
+            color: red;
+            font-size: 50px;
+            animation: rainbowHeart 3s infinite;
+        }
+        #message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff69b4; /* 粉红色 */
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        @keyframes rainbowHeart {
+            0% { color: red; }
+            16.67% { color: orange; }
+            33.33% { color: yellow; }
+            50% { color: green; }
+            66.67% { color: blue; }
+            83.33% { color: indigo; }
+            100% { color: violet; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="heart">❤️</div>
+<button onclick="showMessage()">接受爱心</button>
+<div id="message"></div>
+
+<script>
+    function showMessage() {
+        document.getElementById('heart').style.display = 'none';
+        document.getElementById('message').innerHTML = '爱你宝贝，加油，相信你！';
+        document.getElementById('message').style.display = 'block';
+        document.querySelector('button').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
